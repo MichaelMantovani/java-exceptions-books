@@ -52,9 +52,21 @@ public class Main {
 		FileWriter myBooks = null;
 		try {
 			myBooks = new FileWriter("myBooks.txt");
+			
+			for (int x = 0; x < totalBooks; x++) {
+				Book book = books[x];
+				myBooks.write(book.toString());
+			}
 		} catch (IOException e) {
 			// TODO: handle exception
 			System.err.println("Errore: " + e.getMessage());
+		} finally {
+			if(myBooks != null)
+				try {
+					myBooks.close();
+				} catch (IOException e) {
+					System.err.println("Errore: " + e.getMessage());
+				}
 		}
 
 	}
