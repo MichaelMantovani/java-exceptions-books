@@ -1,5 +1,7 @@
 package org.java.lessons;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
@@ -47,11 +49,11 @@ public class Main {
 		}
 
 		in.close();
-		System.out.println(Arrays.asList(books));
 
+		final File myFile = new File ("myBooks.txt");
 		FileWriter myBooks = null;
 		try {
-			myBooks = new FileWriter("myBooks.txt");
+			myBooks = new FileWriter(myFile);
 			
 			for (int x = 0; x < totalBooks; x++) {
 				Book book = books[x];
@@ -68,6 +70,24 @@ public class Main {
 					System.err.println("Errore: " + e.getMessage());
 				}
 		}
+		
+		Scanner reader = null;
+	
+		try {
+			reader = new Scanner(myFile);
+			
+			while(reader.hasNextLine()) {
+				String data = reader.nextLine();
+				System.out.println(data);
+			}
+		} catch (FileNotFoundException e) {
+			System.err.println("Error: " + e.getMessage());
+		} finally {
+			if (reader != null) 
+				reader.close();
+		}
+		
+		
 
 	}
 }

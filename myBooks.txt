@@ -1,10 +1,10 @@
-Titolo: tom
-Numero di pagine totali: 200
-Autore: tom
-Editore: tom'
+Titolo: Fattoria degli animali
+Numero di pagine totali: 150
+Autore: George Orwell 
+Editore: Feltrinelli 
 ----------------------------------------------------------------
-Titolo: tom
-Numero di pagine totali: 200
-Autore: tom
-Editore: tom
+Titolo: B. come basta
+Numero di pagine totali: 350
+Autore: Travaglio
+Editore: paperFIRST
 ----------------------------------------------------------------
