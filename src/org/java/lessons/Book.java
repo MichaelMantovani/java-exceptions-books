@@ -45,4 +45,13 @@ public class Book {
 		this.editor = editor;
 	}
 	
+	@Override
+	public String toString() {
+		
+		return "Titolo: " + getTitle() + "\n"
+		+ "Numero di pagine totali: "+ getTotalPages() + "\n" 
+		+ "Autore: " + getAuthor() + "\n"
+		+ "Editore: " + getEditor();
+	}
+	
 }
