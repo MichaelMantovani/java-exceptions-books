@@ -18,7 +18,7 @@ public class Book {
 	}
 
 	public void setTitle(String title) throws Exception {
-		if(title.length() < 20)
+		if(title.isBlank() || title.length() < 3)
 			throw new Exception( "There must be a title");
 		this.title = title;
 	}
@@ -28,7 +28,7 @@ public class Book {
 	}
 
 	public void setTotalPages(int totalPages) throws Exception {
-		if(totalPages <= 0) 
+		if(totalPages <= 0 || totalPages < 25) 
 			throw new Exception("Total pages must be more than zero.");
 		this.totalPages = totalPages;
 	}
@@ -38,7 +38,7 @@ public class Book {
 	}
 
 	public void setAuthor(String author) throws Exception {
-		if(author.length() < 0)
+		if(author.length() < 3 || author.isBlank() )
 			throw new Exception( "There must be at least one author");
 		this.author = author;
 	}
@@ -48,7 +48,7 @@ public class Book {
 	}
 
 	public void setEditor(String editor) throws Exception {
-		if(editor.length() < 0)
+		if(editor.length() < 3 || editor.isBlank())
 			throw new Exception( "There must be at least one editor");
 		this.editor = editor;
 	}
