@@ -1,10 +1,5 @@
-Titolo: Fattoria degli animali
-Numero di pagine totali: 150
-Autore: George Orwell 
-Editore: Feltrinelli 
-----------------------------------------------------------------
-Titolo: B. come basta
+Titolo: Harry potter e la pietra filosofale
 Numero di pagine totali: 350
-Autore: Travaglio
-Editore: paperFIRST
+Autore: J.K.Rowling 
+Editore: Mondadori
 ----------------------------------------------------------------

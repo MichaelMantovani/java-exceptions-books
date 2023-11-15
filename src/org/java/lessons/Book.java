@@ -18,8 +18,8 @@ public class Book {
 	}
 
 	public void setTitle(String title) throws Exception {
-		if(title.isBlank() || title.length() < 2)
-			throw new Exception( "There must be a title");
+		if (title.isBlank() || title.length() < 2)
+			throw new Exception("There must be a title");
 		this.title = title;
 	}
 
@@ -28,7 +28,7 @@ public class Book {
 	}
 
 	public void setTotalPages(int totalPages) throws Exception {
-		if(totalPages <= 0 || totalPages < 25) 
+		if (totalPages <= 0 || totalPages < 25)
 			throw new Exception("Total pages must be more than zero.");
 		this.totalPages = totalPages;
 	}
@@ -38,8 +38,8 @@ public class Book {
 	}
 
 	public void setAuthor(String author) throws Exception {
-		if(author.length() < 2 || author.isBlank() )
-			throw new Exception( "There must be at least one author");
+		if (author.length() < 2 || author.isBlank())
+			throw new Exception("There must be at least one author");
 		this.author = author;
 	}
 
@@ -48,8 +48,8 @@ public class Book {
 	}
 
 	public void setEditor(String editor) throws Exception {
-		if(editor.length() < 2 || editor.isBlank())
-			throw new Exception( "There must be at least one editor");
+		if (editor.length() < 2 || editor.isBlank())
+			throw new Exception("There must be at least one editor");
 		this.editor = editor;
 	}
 
@@ -57,7 +57,7 @@ public class Book {
 	public String toString() {
 
 		return "Titolo: " + getTitle() + "\n" + "Numero di pagine totali: " + getTotalPages() + "\n" + "Autore: "
-				+ getAuthor() + "\n" + "Editore: " + getEditor() + "\n" 
+				+ getAuthor() + "\n" + "Editore: " + getEditor() + "\n"
 				+ "----------------------------------------------------------------" + "\n";
 	}
 
