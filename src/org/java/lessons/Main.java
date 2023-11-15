@@ -13,7 +13,7 @@ public class Main {
 		
 		Scanner in = new Scanner(System.in);
 		System.out.println("Quanti libri vuoi aggiungere?");
-		int totalBooks = in.nextInt();
+		int totalBooks = Integer.parseInt(in.nextLine());
 
 		int booksIndex = 0;
 		Book[] books = new Book[totalBooks];
@@ -22,28 +22,32 @@ public class Main {
 			System.out.println("Libro " + (booksIndex + 1));
 			
 			System.out.println("Qual è il titolo ?");
-			String titolo = in.next();
+			String titolo = in.nextLine();
 			
 			System.out.println("Quante pagine ha in totale ?");
-			int totalPages = in.nextInt();
+			 int totalPages = Integer.parseInt(in.nextLine());
 			
 			System.out.println("Chi è l'autore ?");
-			String author = in.next();
+			String author = in.nextLine();
 			
 			System.out.println("Chi è l'editore ?");
-			String editor = in.next();
+			String editor = in.nextLine();
+			
 			try {
 
 				books[booksIndex] = new Book(titolo, totalPages, author, editor);
 
 				booksIndex++;
+				
 
 			} catch (Exception e) {
-				System.out.println("Error: " + e.getMessage());
-			}
+				System.err.println("Error: " + e.getMessage());
+			} 
 
 		}
-
+		
+		in.close();
+		
 		System.out.println(Arrays.asList(books));
 
 	}

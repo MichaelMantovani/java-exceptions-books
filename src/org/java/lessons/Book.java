@@ -17,7 +17,9 @@ public class Book {
 		return title;
 	}
 
-	public void setTitle(String title) {
+	public void setTitle(String title) throws Exception {
+		if(title.length() < 20)
+			throw new Exception( "There must be a title");
 		this.title = title;
 	}
 
@@ -35,7 +37,9 @@ public class Book {
 		return author;
 	}
 
-	public void setAuthor(String author) {
+	public void setAuthor(String author) throws Exception {
+		if(author.length() < 0)
+			throw new Exception( "There must be at least one author");
 		this.author = author;
 	}
 
@@ -43,7 +47,9 @@ public class Book {
 		return editor;
 	}
 
-	public void setEditor(String editor) {
+	public void setEditor(String editor) throws Exception {
+		if(editor.length() < 0)
+			throw new Exception( "There must be at least one editor");
 		this.editor = editor;
 	}
 
