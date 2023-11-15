@@ -1,5 +1,7 @@
 package org.java.lessons;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -46,6 +48,14 @@ public class Main {
 
 		in.close();
 		System.out.println(Arrays.asList(books));
+
+		FileWriter myBooks = null;
+		try {
+			myBooks = new FileWriter("myBooks.txt");
+		} catch (IOException e) {
+			// TODO: handle exception
+			System.err.println("Errore: " + e.getMessage());
+		}
 
 	}
 }
