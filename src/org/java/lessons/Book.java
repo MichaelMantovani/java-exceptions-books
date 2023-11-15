@@ -5,8 +5,8 @@ public class Book {
 	private int totalPages;
 	private String author;
 	private String editor;
-	
-	public Book(String title, int totalPages, String author, String editor) {
+
+	public Book(String title, int totalPages, String author, String editor) throws Exception {
 		setTitle(title);
 		setTotalPages(totalPages);
 		setAuthor(author);
@@ -25,7 +25,9 @@ public class Book {
 		return totalPages;
 	}
 
-	public void setTotalPages(int totalPages) {
+	public void setTotalPages(int totalPages) throws Exception {
+		if(totalPages <= 0) 
+			throw new Exception("Total pages must be more than zero.");
 		this.totalPages = totalPages;
 	}
 
@@ -44,14 +46,12 @@ public class Book {
 	public void setEditor(String editor) {
 		this.editor = editor;
 	}
-	
+
 	@Override
 	public String toString() {
-		
-		return "Titolo: " + getTitle() + "\n"
-		+ "Numero di pagine totali: "+ getTotalPages() + "\n" 
-		+ "Autore: " + getAuthor() + "\n"
-		+ "Editore: " + getEditor();
+
+		return "Titolo: " + getTitle() + "\n" + "Numero di pagine totali: " + getTotalPages() + "\n" + "Autore: "
+				+ getAuthor() + "\n" + "Editore: " + getEditor();
 	}
-	
+
 }
